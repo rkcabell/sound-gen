@@ -92,12 +92,7 @@ class TuningFork:
         self.update()
 
     def update(self):
-        """
-        # Calculate and update physical properties based on current settings.
-        # Lvalue is passde in from L_slider.value
-        # Hvalue is passde in from h_slider.value
-        # Returns: text to be set to area_label.text, moment_label.txt, and frequency_label.text
-        """
+        """ Calculate and update physical properties based on current settings """
         self.length = self.L_slider.value
         self.height = self.H_slider.value
         self.cross_section_area = width * self.height
