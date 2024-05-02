@@ -3,9 +3,6 @@ import numpy as np
 import sounddevice as sd
 from fork import TuningFork, SAMPLE_RATE
 
-# Initialize the list with one default tuning fork
-
-
 def add_fork():
     """Function to add a new tuning fork to the simulation."""
     new_fork = TuningFork(length=0.5, height=0.02, density=3000, shape="cylinder")
@@ -43,21 +40,11 @@ forklist = [TuningFork(length=0.8, height=0.02, density=5800, shape="rectangle")
 button(text="Add Tuning Fork", bind=add_fork)
 button(text="Play All Forks", bind=play_all_forks)
 
-
-# def arrange_canvases():
-#     """Arrange all fork canvases vertically."""
-#     y_offset = 0
-#     for fork in forklist:
-#         fork.canvas.pos = vec(400, y_offset, 0)
-#         y_offset += fork.canvas.height + 10  # Add space between canvases
-
-
 def main():
     while True:
         rate(24)  # 24 fps
         # for fork in forklist:
         #     pass  # Handle dynamic updates or checks
-
 
 if __name__ == "__main__":
     main()
