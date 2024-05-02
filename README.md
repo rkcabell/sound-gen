@@ -3,6 +3,8 @@
 ## Instructions
 Place both python files in the same directory
 
+$ pip install -r requirements.txt
+
 ### Run Command:
 $ python forksim.py
 
